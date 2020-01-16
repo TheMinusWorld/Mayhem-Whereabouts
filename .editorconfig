@@ -1,0 +1,31 @@
+# EditorConfig: https://editorconfig.org
+# Full list of properties:
+# https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+
+# Universal rules
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+tab_width = 2
+trim_trailing_whitespace = true
+max_line_length = 80
+
+# Text files have a slightly smaller line limit since we're expected to read
+# them differently
+[*.md,gitcommit,*.txt]
+max_line_length = 72
+
+# The first line in Makefiles must be tabs unless otherwise configured,
+# so for Makefiles we'll use tabs
+[{Makefile,**.mk}]
+indent_style = tab
+
+# PSR-12 defines 4-space indentation
+[*.php]
+indent_style = space
+indent_size = 4
+tab_width = 4
+
